@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福建闽威科技股份有限公司</title>
+    <link rel="stylesheet" href="/milky-way/Css/index.css">
+    <style>
+        /* 响应式设计 - 全面优化 */
+        @media (max-width: 992px) {
+
+            /* 中等屏幕调整 */
+            .banner {
+                height: 500px;
+            }
+
+            .banner-content h1 {
+                font-size: 2.5em;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .carousel-item {
+                flex: 0 0 33.333%;
+                /* 中等屏幕显示3张 */
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* 头部区域调整为垂直布局 */
+            .header-content {
+                flex-direction: column;
+                /* 垂直排列 */
+                gap: 15px;
+                /* 元素间距15px */
+            }
+
+            /* 显示汉堡菜单按钮 */
+            .menu-toggle {
+                display: block;
+                /* 显示菜单按钮 */
+            }
+
+            /* 导航菜单样式 */
+            nav ul {
+                display: none;
+                /* 默认隐藏 */
+                flex-direction: column;
+                /* 垂直排列 */
+                gap: 10px;
+                /* 菜单项间距 */
+                width: 100%;
+                /* 全宽 */
+                margin-top: 15px;
+                /* 顶部间距 */
+            }
+
+            /* 显示菜单的类 */
+            nav ul.show {
+                display: flex;
+                /* 显示菜单 */
+            }
+
+            .banner {
+                padding: 70px 15px;
+                margin-top: 80px;
+            }
+
+            .banner h2 {
+                margin-top: 32px;
+                font-size: 36px;
+            }
+
+            .banner p {
+                font-size: 18px;
+            }
+
+            .content-section {
+                padding: 25px 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* 手机设备调整 */
+            .banner {
+                height: 350px;
+                margin-top: 100px;
+            }
+
+            .banner-content h1 {
+                font-size: 1.8em;
+            }
+
+            .banner-content p {
+                font-size: 1.1em;
+            }
+
+            .section h2 {
+                font-size: 1.6em;
+                margin-bottom: 30px;
+            }
+
+            .section h2::after {
+                width: 60px;
+                height: 2px;
+            }
+
+            /* 轮播图响应式 */
+            .carousel-item {
+                flex: 0 0 100%;
+                /* 手机显示1张 */
+            }
+
+            .carousel-item img {
+                height: 200px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                padding: 15px;
+            }
+
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <img src="/milky-way/Img/logo.png" alt="福建闽威科技logo" class="logo">
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="/milky-way/index.html" class="active">首页</a></li>
+                    <li><a href="/milky-way/index/Certification.html">资质认证</a></li>
+                    <li><a href="/milky-way/index/Facilities.html">设施设备</a></li>
+                    <li><a href="/milky-way/index/Honor.html">荣誉成就</a></li>
+                    <li><a href="/milky-way/index/Business.html">经营销售</a></li>
+                    <li><a href="/milky-way/index/Development.html">未来发展</a></li>
+                    <li><a href="/milky-way/index/Product&Technology.html">商品&技术</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主横幅 -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>福建闽威科技股份有限公司</h1>
+            <p>高多层、HDI、COB LED、双层、单层电路板专业制造商 | 成立于1985年</p>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>企业概览</h2>
+            <div class="section-content">
+                <div class="text-content">
+                    <p>福建闽威科技股份有限公司（Fujian Milky-way Technology Co., Ltd.）成立于1985年，是一家专注于高多层、HDI、COB
+                        LED、双层和单层电路板制造的国家高新技术企业。公司总部位于福建，拥有现代化的生产基地，致力于为全球客户提供高质量的PCB解决方案。</p>
+                    <p>通过引入先进技术，我们实现了生产流程的高度自动化与智能化，提升效率与品质。目前，公司拥有M3工厂，占地面积100,000平方米，建筑面积63,187平方米，具备强大的产能和研发能力。</p>
+                    <p>我们的产品广泛应用于消费电子、通信、汽车、工业控制等领域，客户遍布全球，包括日立等知名企业。</p>
+                </div>
+                <div class="image-content">
+                    <img src="/milky-way/Img/2.png" alt="M3工厂外观">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2>多元产品版图</h2>
+            <div class="section-content">
+                <div class="text-content">
+                    <p>作为PCB（电子信息工业之母）领域的领导者，我们提供多元化的产品，涵盖多层板、双面板、单面板等，应用于以下领域：</p>
+                    <ul>
+                        <li><strong>多层板/双面板应用</strong>：TV智慧屏、高清巨幕显示屏、网络路由器、安防影像、新能源汽车周边等。</li>
+                        <li><strong>单面板应用</strong>：智能家居、LED绿色照明、快充适配器、新能源动力等。</li>
+                    </ul>
+                    <p>我们的产品服务于5G、人工智能、新能源汽车、可穿戴设备等新兴产业，确保高性能和可靠性。</p>
+                </div>
+                <div class="image-content">
+                    <img src="/milky-way/Img/PCB.png" alt="产品应用领域">
+                </div>
+            </div>
+
+            <!-- 产品轮播图 -->
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- 图片将通过JavaScript动态生成 -->
+                </div>
+                <button class="carousel-btn prev">❮</button>
+                <button class="carousel-btn next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section id="history" class="section">
+        <div class="container">
+            <h2>发展历程</h2>
+            <div class="section-content">
+                <div class="text-content">
+                    <p>自1985年成立以来，闽威科技始终秉持创新精神，实现了跨越式发展。以下是我们的关键里程碑：</p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>1985年</h3>
+                            <p>公司成立，专注于电路板制造。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>1988年</h3>
+                            <p>进入日立供应链，开启国际化合作。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>1994年</h3>
+                            <p>扩建双面板生产线，产品出口欧美。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2000年</h3>
+                            <p>获得ISO9001等多项认证，提升质量管理。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2002年</h3>
+                            <p>扩建M2工厂，新增多层板产线,产值突破1亿元，成为行业领先企业。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2017年</h3>
+                            <p>通过环境管理体系认证，践行绿色制造。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2021年</h3>
+                            <p>年产值突破3亿元，业务持续增长。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2024年</h3>
+                            <p>M3工厂投产，实现自动化升级。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>2025年</h3>
+                            <p>MES系统上线，推动智能制造。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>未来规划</h3>
+                            <p>服务5G、人工智能、新能源汽车、可穿戴设备等新兴产业。规划建设智能化产业园，预计年产能超600万㎡，产值超20亿元。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="image-content">
+                    <img src="/Img/3.png" alt="发展历程时间轴">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>福建省福州市闽威科技股份有限公司</p>
+                    <p>MW-CP-2025-08-R3</p>
+                    <p>www.milky-way.com.cn</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <div class="footer-links-container">
+                        <div class="footer-links-col left-col">
+                            <a href="/milky-way/index.html">首页</a>
+                            <a href="/milky-way/index/Certification.html">资质认证</a>
+                            <a href="/milky-way/index/Facilities.html">设施设备</a>
+                            <a href="/milky-way/index/Honor.html">荣誉成就</a>
+                        </div>
+                        <div class="footer-links-col right-col">
+                            <a href="/milky-way/index/Business.html">经营销售</a>
+                            <a href="/milky-way/index/Development.html">未来发展</a>
+                            <a href="/milky-way/index/Product&Technology.html">商品&技术</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>福建闽威科技股份有限公司成立于1985年，是一家专注于高多层、HDI、COB LED、双层和单层电路板制造的国家高新技术企业。</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 福建闽威科技股份有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏高亮
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+        });
+
+        // 移动端菜单切换
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('show');
+        });
+
+        // 产品轮播图功能
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselTrack = document.getElementById('carouselTrack');
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+            const carouselContainer = document.querySelector('.carousel-container');
+
+            // 产品图片数据
+            const products = [
+                { img: '/milky-way/Img/pc1.png', title: 'TV智慧屏' },
+                { img: '/milky-way/Img/pc2.png', title: '超薄TV' },
+                { img: '/milky-way/Img/pc3.png', title: '显示器' },
+                { img: '/milky-way/Img/pc4.png', title: '无边框显示器' },
+                { img: '/milky-way/Img/pc5.png', title: '电脑 游戏设备' },
+                { img: '/milky-way/Img/pc6.png', title: '影音设备' },
+                { img: '/milky-way/Img/pc7.png', title: '专业影像设备' },
+                { img: '/milky-way/Img/pc8.png', title: '机顶盒' },
+                { img: '/milky-way/Img/pc9.png', title: '路由器' },
+                { img: '/milky-way/Img/pc10.png', title: '光猫 交换机' },
+                { img: '/milky-way/Img/pc11.png', title: '高速板卡' },
+                { img: '/milky-way/Img/pc12.png', title: '5G通讯' },
+                { img: '/milky-way/Img/pc13.png', title: '空调' },
+                { img: '/milky-way/Img/pc14.png', title: '洗衣机' },
+                { img: '/milky-way/Img/pc15.png', title: '全屋智能中枢' },
+                { img: '/milky-way/Img/pc16.png', title: '智能家居设备' },
+                { img: '/milky-way/Img/pc17.png', title: 'LED灯具' },
+                { img: '/milky-way/Img/pc18.png', title: 'LED格栅屏' },
+                { img: '/milky-way/Img/pc19.png', title: 'MiNi LED显示屏' },
+                { img: '/milky-way/Img/pc20.png', title: '汽车灯' },
+                { img: '/milky-way/Img/pc21.png', title: '头灯' },
+                { img: '/milky-way/Img/pc22.png', title: '汽车中控显示屏' },
+                { img: '/milky-way/Img/pc23.png', title: '适配器电源' },
+                { img: '/milky-way/Img/pc24.png', title: '手机快充' },
+                { img: '/milky-way/Img/pc25.png', title: '户外储能' },
+                { img: '/milky-way/Img/pc26.png', title: '充电桩' },
+                { img: '/milky-way/Img/pc27.png', title: '高功率电源与储能' },
+                { img: '/milky-way/Img/pc28.png', title: '车规级电池管理' },
+                { img: '/milky-way/Img/pc29.png', title: '汽车显示灯板' },
+                { img: '/milky-way/Img/pc30.png', title: '工业自动化' },
+                { img: '/milky-way/Img/pc31.png', title: '伺服控制' },
+                { img: '/milky-way/Img/pc32.png', title: '工控板' },
+                { img: '/milky-way/Img/pc33.png', title: '数据中心 光通信' },
+            ];
+
+            // 动态生成轮播图内容
+            function initCarousel() {
+                carouselTrack.innerHTML = '';
+
+                // 添加产品项
+                products.forEach((product, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'carousel-item';
+                    item.innerHTML = `
+                        <img src="${product.img}" alt="${product.title}">
+                        <p>${product.title}</p>
+                    `;
+                    carouselTrack.appendChild(item);
+                });
+            }
+
+            // 初始化轮播图
+            initCarousel();
+
+            let currentIndex = 0;
+            const itemCount = products.length;
+            const itemsPerView = window.innerWidth <= 768 ? 2 : 4; // 响应式显示数量
+            let autoPlayInterval;
+
+            // 更新轮播图位置
+            function updateCarousel() {
+                const itemWidth = 100 / itemsPerView;
+                const offset = -currentIndex * itemWidth;
+                carouselTrack.style.transform = `translateX(${offset}%)`;
+
+                // 检查是否出现空白区域
+                const lastVisibleIndex = currentIndex + itemsPerView - 1;
+                if (lastVisibleIndex >= itemCount) {
+                    // 如果最右边出现空白，回到第一张
+                    currentIndex = 0;
+                    carouselTrack.style.transform = `translateX(0%)`;
+                }
+            }
+
+            // 下一张
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % itemCount;
+                updateCarousel();
+            }
+
+            // 上一张
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+                updateCarousel();
+            }
+
+            // 自动轮播功能
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, 3000); // 每3秒切换一次
+            }
+
+            // 停止自动轮播
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            // 下一张按钮点击事件
+            nextBtn.addEventListener('click', function () {
+                stopAutoPlay();
+                nextSlide();
+                startAutoPlay();
+            });
+
+            // 上一张按钮点击事件
+            prevBtn.addEventListener('click', function () {
+                stopAutoPlay();
+                prevSlide();
+                startAutoPlay();
+            });
+
+            // 鼠标悬停时停止自动轮播
+            carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+
+            // 鼠标离开时开始自动轮播
+            carouselContainer.addEventListener('mouseleave', startAutoPlay);
+
+            // 响应式调整
+            window.addEventListener('resize', function () {
+                const newItemsPerView = window.innerWidth <= 480 ? 1 :
+                    window.innerWidth <= 768 ? 2 : 4;
+                if (newItemsPerView !== itemsPerView) {
+                    updateCarousel();
+                }
+            });
+
+            // 初始化位置
+            updateCarousel();
+
+            // 开始自动轮播
+            startAutoPlay();
+        });
+    </script>
+</body>
+
+</html>

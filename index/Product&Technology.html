@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品与技术展示 - 福建闽威科技</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/milky-way/Css/Product&Technology.css">
+    <style>
+        
+
+    /* 响应式设计 - 全面优化 */
+        @media (max-width: 992px) {
+            /* 中等屏幕调整 */
+            .banner {
+                height: 500px;
+            }
+            .banner-content h1 {
+                font-size: 2.5em;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .carousel-item {
+                flex: 0 0 33.333%; /* 中等屏幕显示3张 */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* 头部区域调整为垂直布局 */
+            .header-content {
+              flex-direction: column; /* 垂直排列 */
+              gap: 15px; /* 元素间距15px */
+            }
+            
+            /* 显示汉堡菜单按钮 */
+            .menu-toggle {
+              display: block; /* 显示菜单按钮 */
+            }
+            
+            /* 导航菜单样式 */
+            nav ul {
+              display: none; /* 默认隐藏 */
+              flex-direction: column; /* 垂直排列 */
+              gap: 10px; /* 菜单项间距 */
+              width: 100%; /* 全宽 */
+              margin-top: 15px; /* 顶部间距 */
+            }
+            
+            /* 显示菜单的类 */
+            nav ul.show {
+              display: flex; /* 显示菜单 */
+            }
+            
+            .banner {
+                padding: 70px 15px;
+                margin-top: 80px;
+            }
+            
+            .banner h2 {
+                margin-top: 36px;
+                font-size: 36px;
+            }
+            
+            .banner p {
+                font-size: 18px;
+            }
+            
+            .content-section {
+                padding: 25px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* 手机设备调整 */
+            .banner {
+                height: 350px;
+                margin-top: 100px;
+            }
+            .banner-content h1 {
+                font-size: 1.8em;
+            }
+            .banner-content p {
+                font-size: 1.1em;
+            }
+            .section h2 {
+                font-size: 1.6em;
+                margin-bottom: 30px;
+            }
+            .section h2::after {
+                width: 60px;
+                height: 2px;
+            }
+             .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+        
+        /* 滚动进度条 */
+        /* .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            z-index: 1001;
+        }
+        
+        .progress-bar {
+            height: 3px;
+            background: linear-gradient(90deg, #c00, #ff8c00);
+            width: 0%;
+            transition: width 0.3s;
+        } */
+        
+        /* 回到顶部按钮 */
+        /* .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #c00;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #a00;
+            transform: translateY(-5px);
+        } */
+        
+        /* 动画效果 */
+        /* .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        .stagger-delay-4 { transition-delay: 0.4s; }
+        .stagger-delay-5 { transition-delay: 0.5s; } */
+    </style>
+</head>
+<body>
+    <!-- 滚动进度条 -->
+    <!-- <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div> -->
+    
+    <!-- 回到顶部按钮 -->
+    <!-- <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div> -->
+    
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <img src="/milky-way/Img/logo.png" alt="福建闽威科技logo" class="logo">
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="/milky-way/index.html">首页</a></li>
+                    <li><a href="/milky-way/index/Certification.html">资质认证</a></li>
+                    <li><a href="/milky-way/index/Facilities.html">设施设备</a></li>
+                    <li><a href="/milky-way/index/Honor.html">荣誉成就</a></li>
+                    <li><a href="/milky-way/index/Business.html">经营销售</a></li>
+                    <li><a href="/milky-way/index/Development.html">未来发展</a></li>
+                    <li><a href="/milky-way/index/Product&Technology.html" class="active">商品&技术</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 横幅 -->
+    <section class="banner">
+        <div class="container">
+            <h2>商品与技术展示</h1>
+            <p>福建闽威科技提供从单面板到高多层HDI的全系列电路板解决方案，满足能源、显示、通信、汽车电子等多元化应用需求</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- 单面板产品展示 -->
+        <section class="content-section fade-in">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h2 class="section-title">能源级/消费级 单面板</h2>
+            </div>
+            
+            <p class="section-subtitle">高性价比、快速交付能力，适用于适配器电源板、手机快充电源板等消费电子领域</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p1.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板</p>
+                            <p><strong>材料工艺:</strong> FR-1/FR-2/CEM-1/FR-4/CEM-3</p>
+                            <p><strong>适用领域:</strong> 适配器电源板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 具备高功率密度和宽温运行能力，满足全球高端电源市场的需求。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p2.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板 蓝油+蓝底</p>
+                            <p><strong>材料工艺:</strong> CEM-1/FR-4</p>
+                            <p><strong>适用领域:</strong> 手机快充电源板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 产品单口功率突破120W,及氮化镓体积缩小，发热降低的形态落地。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p3png.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板 2OZ厚铜</p>
+                            <p><strong>材料工艺:</strong> FR-1/CEM-1/FR-4/CEM-3</p>
+                            <p><strong>适用领域:</strong> 户外储能a电源板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 具备强大的电磁兼容性，在复杂电磁环境下稳定运行。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p4.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板</p>
+                            <p><strong>材料工艺:</strong> FR-1/CEM-1/FR-4/CEM-3</p>
+                            <p><strong>适用领域:</strong> 飞利浦灯具电源板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 超高效节能，无紫外、无红外，直流驱动无频闪，通过欧盟光生物安全认证。
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p5.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板</p>
+                            <p><strong>材料工艺:</strong> CEM-1/KB/长春</p>
+                            <p><strong>适用领域:</strong> 超薄TV电源控制板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 具备高耐热性和低功耗特性，确保电视在长时间运行中保持稳定性能，同时满足超薄外观设计需求。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p6.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板</p>
+                            <p><strong>材料工艺:</strong> 高CTI CEM-1/KB/长春/生益</p>
+                            <p><strong>适用领域:</strong> 空调电源主控板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 该单面板通过优化电路布局和材料选择，有效降低运行噪音，提升空调的静音性能，为用户营造舒适环境。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p7.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板</p>
+                            <p><strong>材料工艺:</strong> 高耐热 CEM-1/KB/长春/生益</p>
+                            <p><strong>适用领域:</strong> 无边框显示器电源板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 无边框显示器的单面板，采用先进工艺实现高分辨率信号传输，同时保持低功耗和高可靠性，为用户提供极致视觉体验。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p8.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>单面板</p>
+                            <p><strong>材料工艺:</strong> CEM-1CEM-1/KB/长春/生益/ZD</p>
+                            <p><strong>适用领域:</strong> 音响电源板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> Hi-Fi级音响电源板采用高纯度铜线，减少信号传输损耗，提供纯净的音频信号，满足高端音响设备的需求。
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            
+            <div class="advantages">
+                <div class="advantage-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>单面板的市场优势:</h3>
+                    <p>高性价比、快速交付能力。</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 双面板产品展示 -->
+        <section class="content-section fade-in stagger-delay-1">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h2 class="section-title">显示级/能源级 双面板</h2>
+            </div>
+            
+            <p class="section-subtitle">高可靠性、提高线路集成、家电产品适用性广，适用于8KTV、电脑显示主板、车规级电池管理等应用</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p9.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 8K TV双面主板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 先进的散热设计， 支持8K超高清视频的流畅播放。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p10.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 电脑显示主板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 具备低延迟和高刷新率特性，提供极致的游戏体验。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p11.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> 高CTI FR-4/KB/华正</p>
+                            <p><strong>适用领域:</strong> 空调双面控制主板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 高效节能，先进的变频技术确保空调在不同运行模式下的性能表现。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p12.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> 高CTI FR-4/KB/华正</p>
+                            <p><strong>适用领域:</strong> 洗衣机双面控制主板</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p13.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板 绿油板OSP</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 车规级电池管理双面板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p14.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板 白油板喷锡</p>
+                            <p><strong>材料工艺:</strong> 高CTI FR-4/KB/华正/生益</p>
+                            <p><strong>适用领域:</strong> 全屋智能中枢板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p15.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板OSP</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 2OZ白油+绿油充电桩板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p16.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板 蓝油板</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 显示板卡</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages">
+                <div class="advantage-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>双面板的市场优势:</h3>
+                    <p>高可靠性、提高线路集成、家电产品适用性广。</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- LED显示高多层HDI矩阵 -->
+        <section class="content-section fade-in stagger-delay-2">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h2 class="section-title">LED显示高多层HDI矩阵</h2>
+            </div>
+            
+            <p class="section-subtitle">适用于LED异形屏、格栅屏、微间距屏、Mini LED显示屏等高端显示应用</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p17.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> LED 异形屏</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 支持高亮度和高对比度显示，适用于创意显示场景。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p18.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> LED 格栅屏</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>产品特点:</strong> 格栅屏具备高通透性和低功耗特性，适用于户外广告和建筑照明。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p19.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>SMD 四层一阶HDI 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> OSP：板厚：2.0T 控深+墨色管控</p>
+                            <p><strong>适用领域:</strong> SMD微间距屏 适用会议中心和高端会议室</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>工艺特点:</strong> 最小贴片：0.3*0.4mm 贴片间距：0.25mm 线宽间距：3/3mil,贴片尺寸公差：+/-20um
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p20.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>COB 双面通孔 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 化锡：板厚：1.6/2.0T 控深+墨色管控</p>
+                            <p><strong>适用领域:</strong> Mini LED显示屏 适用光通信、LED背光、直显</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>工艺特点:</strong> 最小贴片：0.13*0.13mm 贴片间距：50um 线宽间距：2.5/2.5mil,贴片尺寸公差：+/-15um
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p21.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层盘中孔板化金板 中TG150无卤材料</p>
+                            <p><strong>材料工艺:</strong> 生益S1150G 成品板厚：0.3T薄板</p>
+                            <p><strong>适用领域:</strong> 汽车显示灯板</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>工艺特点:</strong> 树塞+POFV 最小贴片：0.3*0.35mm 贴片间距：0.4mm 板厚公差：+/0.1mm/-0
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p22.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>COB 四层一阶HDI 中TG150/高TG170 材料</p>
+                            <p><strong>材料工艺:</strong> 化锡：板厚：2.0T 控深+墨色管控</p>
+                            <p><strong>适用领域:</strong> Mini LED显示屏 适用光通信、LED背光、直显</p>
+                        </div>
+                        <div class="product-features">
+                            <strong>工艺特点:</strong> 最小贴片：0.13*0.13mm 贴片间距：50um 线宽间距：2.5/2.5mil,贴片尺寸公差：+/-15um
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 网通与仪器仪表应用展示 -->
+        <section class="content-section fade-in stagger-delay-1">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h2 class="section-title">网通与仪器仪表应用</h2>
+            </div>
+            
+            
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p23.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 0.3T 薄板 化金 黑油</p>
+                            <p><strong>适用领域:</strong> 电脑键盘板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p24.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>六层通孔化金 高TG170材料</p>
+                            <p><strong>材料工艺:</strong> 化金 生益/南亚/联茂/台光</p>
+                            <p><strong>适用领域:</strong> 工业自动化变频与伺服控制</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p25.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> OSP 蓝油</p>
+                            <p><strong>适用领域:</strong> 网通类：机顶盒、路由器</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p26.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>六层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> OSP 黑油</p>
+                            <p><strong>适用领域:</strong> 网通类：光猫、交换机</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p27.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面通孔板 锡手指5面包铜设计工艺</p>
+                            <p><strong>材料工艺:</strong> 无铅喷锡 华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 高速板卡（高端插拔式PCB)：应用于服务器、通信、工控领域的高速板卡</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p28.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> OSP 黑油</p>
+                            <p><strong>适用领域:</strong> 飞行器电源控制板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p29.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面通孔板 碳膜板</p>
+                            <p><strong>材料工艺:</strong> 喷锡 绿油+碳膜</p>
+                            <p><strong>适用领域:</strong> 智能电表板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p30.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>六层通孔板 四周半壁孔设计</p>
+                            <p><strong>材料工艺:</strong> 化金板1.5U</p>
+                            <p><strong>适用领域:</strong> 通信模组、工业控制智能仪表等电子模块</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages">
+                <div class="advantage-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>高多层</h3>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 智能家电与汽车应用展示 -->
+        <section class="content-section fade-in stagger-delay-1">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h2 class="section-title">智能家电与汽车应用</h2>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p31.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>六层一阶HDI 中TG150无卤</p>
+                            <p><strong>材料工艺:</strong> OSP 生益/南亚/联茂/台光</p>
+                            <p><strong>适用领域:</strong> 高端电脑和工作台</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p32.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 高反射率白油 >85%</p>
+                            <p><strong>适用领域:</strong> 车规级头灯照明</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p33.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 高反射率白油 >85%</p>
+                            <p><strong>适用领域:</strong> 汽车中控显示屏板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p34.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 高反射率白油 >85%</p>
+                            <p><strong>适用领域:</strong> 汽车灯板照明</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p35.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 金手指50u 抗UV、耐高低温</p>
+                            <p><strong>适用领域:</strong> 户外充电高功率传输</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p36.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>六层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> OSP KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 智能音响智能屏</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p37.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>十层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 金手指 生益S1000H </p>
+                            <p><strong>适用领域:</strong> 8K专业摄像头主板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p38.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>四层通孔板 中TG150材料</p>
+                            <p><strong>材料工艺:</strong> 化金1U</p>
+                            <p><strong>适用领域:</strong> 智能支付、POSS机</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages">
+                <div class="advantage-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>高多层及HDI</h3>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 工控智能与5G通讯展示 -->
+        <section class="content-section fade-in stagger-delay-1">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h2 class="section-title">工控智能与5G通讯</h2>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p39.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 8K TV双面主板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p40.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 电脑显示主板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p41png.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> 高CTI FR-4/KB/华正</p>
+                            <p><strong>适用领域:</strong> 空调双面控制主板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p42.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板</p>
+                            <p><strong>材料工艺:</strong> 高CTI FR-4/KB/华正</p>
+                            <p><strong>适用领域:</strong> 洗衣机双面控制主板</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p43.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板 绿油板OSP</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 车规级电池管理双面板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p44.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板 白油板喷锡</p>
+                            <p><strong>材料工艺:</strong> 高CTI FR-4/KB/华正/生益</p>
+                            <p><strong>适用领域:</strong> 全屋智能中枢板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p45.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板OSP</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 2OZ白油+绿油充电桩板</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/milky-way/Img/p46.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-details">
+                            <p><strong>产品类型:</strong>双面板 蓝油板</p>
+                            <p><strong>材料工艺:</strong> FR-4/KB/华正/生益/南亚</p>
+                            <p><strong>适用领域:</strong> 显示板卡</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages">
+                <div class="advantage-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>高多层及HDI</h3>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 高多层支持能力 -->
+        <section class="content-section fade-in stagger-delay-4">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h2 class="section-title">高多层支持能力</h2>
+            </div>
+            
+            
+            <div class="table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">项目</th>
+                            <th colspan="2">2025</th>
+                            <th colspan="2">2026</th>
+                            <th colspan="2">2027</th>
+                        </tr>
+                        <tr>
+                            <th class="year-header">批量</th>
+                            <th class="year-header">样品</th>
+                            <th class="year-header">批量</th>
+                            <th class="year-header">样品</th>
+                            <th class="year-header">批量</th>
+                            <th class="year-header">样品</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>通孔对准度/mil</td>
+                            <td>D+8</td>
+                            <td>D+7</td>
+                            <td>D+7</td>
+                            <td>D+6</td>
+                            <td>D+6</td>
+                            <td>D+6</td>
+                        </tr>
+                        <tr>
+                            <td>最小BGA/mm</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">树塞最大厚径比</td>
+                            <td>TH 8 : 1</td>
+                            <td>TH 10 : 1</td>
+                            <td>TH 10 : 1</td>
+                            <td>TH 12 : 1</td>
+                            <td>TH 12 : 1</td>
+                            <td>TH 16 : 1</td>
+                        </tr>
+                        <tr>
+                            <td>BH 1 : 1</td>
+                            <td>BH 1 : 1</td>
+                            <td>BH 1 : 1</td>
+                            <td>BH 1 : 1</td>
+                            <td>BH 1 : 1</td>
+                            <td>BH 1 : 1</td>
+                        </tr>
+                        <tr>
+                            <td>阻焊对准度/mil</td>
+                            <td>±2.0</td>
+                            <td>±1.5</td>
+                            <td>±1.5</td>
+                            <td>±1.0</td>
+                            <td>±1.0</td>
+                            <td>±1.0</td>
+                        </tr>
+                        <tr>
+                            <td>成型公差/mil</td>
+                            <td>±4.0</td>
+                            <td>±4.0</td>
+                            <td>±4.0</td>
+                            <td>±4.0</td>
+                            <td>±4.0</td>
+                            <td>±4.0</td>
+                        </tr>
+                        <tr>
+                            <td>图形到边公差/mm</td>
+                            <td>≥0.25</td>
+                            <td>≥0.25</td>
+                            <td>≥0.20</td>
+                            <td>≥0.15</td>
+                            <td>≥0.15</td>
+                            <td>≥0.13</td>
+                        </tr>
+                        <tr>
+                            <td>表面处理方式</td>
+                            <td colspan="6">化金、镀金、无铅喷锡、化锡、化银、OSP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- HDI制程能力 -->
+        <section class="content-section fade-in stagger-delay-4">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h2 class="section-title">HDI制程能力</h2>
+            </div>
+            
+            <div class="table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">项目</th>
+                            <th colspan="2">2025</th>
+                            <th colspan="2">2026</th>
+                            <th colspan="2">2027</th>
+                        </tr>
+                        <tr>
+                            <th class="year-header">常规</th>
+                            <th class="year-header">极限</th>
+                            <th class="year-header">常规</th>
+                            <th class="year-header">极限</th>
+                            <th class="year-header">常规</th>
+                            <th class="year-header">极限</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>叠构</td>
+                            <td>1+N+1</td>
+                            <td>2+N+2</td>
+                            <td>2+N+2</td>
+                            <td>3+N+3</td>
+                            <td>3+N+3</td>
+                            <td>4+N+4</td>
+                        </tr>
+                        <tr>
+                            <td>最小盲孔孔径/mil</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>最大盲孔厚径比</td>
+                            <td>0.8 : 1</td>
+                            <td>1:01</td>
+                            <td>1:01</td>
+                            <td>1:01</td>
+                            <td>1:01</td>
+                            <td>1:01</td>
+                        </tr>
+                        <tr>
+                            <td>最小盲孔PAD/mil</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>最小盲孔Dimple/μm</td>
+                            <td>≤15</td>
+                            <td>≤10</td>
+                            <td>≤10</td>
+                            <td>≤10</td>
+                            <td>≤10</td>
+                            <td>≤10</td>
+                        </tr>
+                        <tr>
+                            <td>最小BGA/mm</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                            <td>0.3</td>
+                        </tr>
+                        <tr>
+                            <td>最小板厚/mm</td>
+                            <td>0.4</td>
+                            <td>0.35</td>
+                            <td>0.35</td>
+                            <td>0.35</td>
+                            <td>0.35</td>
+                            <td>0.35</td>
+                        </tr>
+                        <tr>
+                            <td>最大板厚/mm</td>
+                            <td>3.2</td>
+                            <td>3.2</td>
+                            <td>3.2</td>
+                            <td>3.2</td>
+                            <td>3.2</td>
+                            <td>3.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- COB制程能力 -->
+        <section class="content-section fade-in stagger-delay-2">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h2 class="section-title">COB制程能力</h2>
+            </div>
+            
+            <div class="table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">项目</th>
+                            <th colspan="2">2025</th>
+                            <th colspan="2">2026</th>
+                            <th colspan="2">2027</th>
+                        </tr>
+                        <tr>
+                            <th class="year-header">批量</th>
+                            <th class="year-header">样品</th>
+                            <th class="year-header">批量</th>
+                            <th class="year-header">样品</th>
+                            <th class="year-header">批量</th>
+                            <th class="year-header">样品</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Mark点到Mark点/mm</td>
+                            <td >±0.05</td>
+                            <td>±0.035</td>
+                            <td >±0.05</td>
+                            <td>±0.035</td>
+                            <td >±0.05</td>
+                            <td>±0.035</td>
+                        </tr>
+                        <tr>
+                            <td >(长边&lt;350)</td>
+                            <td>(长边＜250)</td>
+                            <td >(长边&lt;350)</td>
+                            <td>(长边＜250)</td>
+                            <td >(长边&lt;350)</td>
+                            <td>(长边＜250)</td>
+                        </tr>
+
+                        <tr>
+                            <td>最小灯PAD尺寸/mm</td>
+                            <td>0.13×0.13</td>
+                            <td>0.10×0.13</td>
+                            <td>0.10×0.13</td>
+                            <td>0.08×0.13</td>
+                            <td>0.08×0.13</td>
+                            <td>0.08×0.10</td>
+                        </tr>
+                        <tr>
+                            <td>最小灯PAD尺寸公差/mm</td>
+                            <td>±0.20</td>
+                            <td>±0.18</td>
+                            <td>±0.18</td>
+                            <td>±0.15</td>
+                            <td>±0.18</td>
+                            <td>±0.15</td>
+                        </tr>
+                        <tr>
+                            <td>最小灯PAD间距/μm</td>
+                            <td>55</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>最小灯PAD间距公差/μm</td>
+                            <td>±15</td>
+                            <td>±12</td>
+                            <td>±12</td>
+                            <td>±10</td>
+                            <td>±12</td>
+                            <td>±10</td>
+                        </tr>
+                        <tr>
+                            <td>阻焊油墨厚度/μm</td>
+                            <td>5~15</td>
+                            <td>5~20</td>
+                            <td>5~18</td>
+                            <td>5~20</td>
+                            <td>5~20</td>
+                            <td>5~25</td>
+                        </tr>
+                        <tr>
+                            <td>阻焊油墨对位/μm</td>
+                            <td>±37.5</td>
+                            <td>±25(DI机)</td>
+                            <td>±37.5</td>
+                            <td>±25(DI机)</td>
+                            <td>±37.5</td>
+                            <td>±25(DI机)</td>
+                        </tr>
+
+                        <tr>
+                            <td>控深钻公差/mm</td>
+                            <td>±0.10</td>
+                            <td>±0.075</td>
+                            <td>±0.075</td>
+                            <td>±0.05</td>
+                            <td>±0.075</td>
+                            <td>±0.05</td>
+                        </tr>
+                        <tr>
+                            <td>板翘公差/%</td>
+                            <td>≤0.75</td>
+                            <td>≤0.5</td>
+                            <td>≤0.5</td>
+                            <td>≤0.5</td>
+                            <td>≤0.5</td>
+                            <td>≤0.3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 特殊工艺制程能力 -->
+        <section class="content-section fade-in stagger-delay-3">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h2 class="section-title">特殊工艺制程能力</h2>
+            </div>
+            
+            <div class="table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">项目</th>
+                            <th>技术能力</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">POFV (VIPPO)</td>
+                            <td>√</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">混压</td>
+                            <td>碳氢+FR4、高速+FR4</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">金手指</td>
+                            <td>无引线</td>
+                            <td>√</td>
+                        </tr>
+                        <tr>
+                            <td>长短</td>
+                            <td>√</td>
+                        </tr>
+                        <tr>
+                            <td>分段</td>
+                            <td>分段间距6mils</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">半金属化</td>
+                            <td>最小半化孔0.6mm，Pitch0.9mm</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">机械盲孔+顺序层压</td>
+                            <td>N+N、N+M</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">其它</td>
+                            <td>沉头孔工艺、RCC工艺、压合金属基</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>福建省福州市闽威科技股份有限公司</p>
+                    <p>MW-CP-2025-08-R3</p>
+                    <p>www.milky-way.com.cn</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <div class="footer-links-container">
+                        <div class="footer-links-col left-col">
+                            <a href="/milky-way/index.html">首页</a>
+                            <a href="/milky-way/index/Certification.html">资质认证</a>
+                            <a href="/milky-way/index/Facilities.html">设施设备</a>
+                            <a href="/milky-way/index/Honor.html">荣誉成就</a>
+                        </div>
+                        <div class="footer-links-col right-col">
+                            <a href="/milky-way/index/Business.html">经营销售</a>
+                            <a href="/milky-way/index/Development.html">未来发展</a>
+                            <a href="/milky-way/index/Product&Technology.html">商品&技术</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>福建闽威科技股份有限公司成立于1985年，是一家专注于高多层、HDI、COB LED、双层和单层电路板制造的国家高新技术企业。</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 福建闽威科技股份有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('show');
+        });
+        // 页面加载完成后执行
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // 滚动进度条
+        //     const progressBar = document.getElementById('progressBar');
+            
+        //     window.addEventListener('scroll', function() {
+        //         const windowHeight = window.innerHeight;
+        //         const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        //         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        //         const progress = (scrollTop / documentHeight) * 100;
+        //         progressBar.style.width = progress + '%';
+                
+        //         // 回到顶部按钮显示/隐藏
+        //         const backToTop = document.getElementById('backToTop');
+        //         if (scrollTop > 300) {
+        //             backToTop.classList.add('visible');
+        //         } else {
+        //             backToTop.classList.remove('visible');
+        //         }
+                
+        //         // 导航栏效果
+        //         const header = document.querySelector('header');
+        //         if (scrollTop > 100) {
+        //             header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+        //             header.style.padding = '10px 0';
+        //         } else {
+        //             header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        //             header.style.padding = '15px 0';
+        //         }
+        //     });
+            
+        //     // 回到顶部功能
+        //     document.getElementById('backToTop').addEventListener('click', function() {
+        //         window.scrollTo({
+        //             top: 0,
+        //             behavior: 'smooth'
+        //         });
+        //     });
+            
+            // 滚动动画效果
+            // const observerOptions = {
+            //     threshold: 0.1,
+            //     rootMargin: '0px 0px -50px 0px'
+            // };
+            
+            // const observer = new IntersectionObserver(function(entries) {
+            //     entries.forEach(entry => {
+            //         if (entry.isIntersecting) {
+            //             entry.target.classList.add('visible');
+            //         }
+            //     });
+            // }, observerOptions);
+            
+            // 观察所有需要动画的元素
+            // const sections = document.querySelectorAll('.fade-in');
+            
+            // sections.forEach(section => {
+            //     observer.observe(section);
+            // });
+            
+            // 表格行悬停效果
+            // const tableRows = document.querySelectorAll('.tech-table tr');
+            // tableRows.forEach(row => {
+            //     row.addEventListener('mouseenter', function() {
+            //         this.style.backgroundColor = '#f0f0f0';
+            //     });
+                
+            //     row.addEventListener('mouseleave', function() {
+            //         if (this.rowIndex % 2 === 0) {
+            //             this.style.backgroundColor = '#f9f9f9';
+            //         } else {
+            //             this.style.backgroundColor = 'white';
+            //         }
+            //     });
+            // });
+        //});
+    </script>
+</body>
+</html>

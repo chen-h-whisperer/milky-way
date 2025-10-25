@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>经营销售-福建闽威科技</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/milky-way/Css/Business.css">
+    <style>
+        /* 动画效果 */
+        /* @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .stagger-delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .stagger-delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .stagger-delay-3 { animation-delay: 0.3s; opacity: 0; } */
+        
+        /* 滚动效果 */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 响应式设计 - 全面优化 */
+        @media (max-width: 992px) {
+            /* 中等屏幕调整 */
+            .banner {
+                height: 500px;
+            }
+            .banner-content h1 {
+                font-size: 2.5em;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .carousel-item {
+                flex: 0 0 33.333%; /* 中等屏幕显示3张 */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* 头部区域调整为垂直布局 */
+            .header-content {
+              flex-direction: column; /* 垂直排列 */
+              gap: 15px; /* 元素间距15px */
+            }
+            
+            /* 显示汉堡菜单按钮 */
+            .menu-toggle {
+              display: block; /* 显示菜单按钮 */
+            }
+            
+            /* 导航菜单样式 */
+            nav ul {
+              display: none; /* 默认隐藏 */
+              flex-direction: column; /* 垂直排列 */
+              gap: 10px; /* 菜单项间距 */
+              width: 100%; /* 全宽 */
+              margin-top: 15px; /* 顶部间距 */
+            }
+            
+            /* 显示菜单的类 */
+            nav ul.show {
+              display: flex; /* 显示菜单 */
+            }
+            
+            .banner {
+                padding: 70px 15px;
+                margin-top: 80px;
+            }
+            
+            .banner h2 {
+                margin-top: 32px;
+                font-size: 36px;
+            }
+            
+            .banner p {
+                font-size: 18px;
+            }
+            
+            .content-section {
+                padding: 25px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* 手机设备调整 */
+            .banner {
+                height: 350px;
+                margin-top: 100px;
+            }
+            .banner-content h1 {
+                font-size: 1.8em;
+            }
+            .banner-content p {
+                font-size: 1.1em;
+            }
+            .section h2 {
+                font-size: 1.6em;
+                margin-bottom: 30px;
+            }
+            .section h2::after {
+                width: 60px;
+                height: 2px;
+            }
+            
+            /* 轮播图响应式 */
+            .carousel-item {
+                flex: 0 0 100%; /* 手机显示1张 */
+            }
+            
+            .carousel-item img {
+                height: 200px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-item {
+                padding: 15px;
+            }
+            
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <img src="/milky-way/Img/logo.png" alt="福建闽威科技logo" class="logo">
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="/milky-way/index.html">首页</a></li> 
+                    <li><a href="/milky-way/index/Certification.html">资质认证</a></li>
+                    <li><a href="/milky-way/index/Facilities.html">设施设备</a></li>
+                    <li><a href="/milky-way/index/Honor.html">荣誉成就</a></li>
+                    <li><a href="/milky-way/index/Business.html" class="active">经营销售</a></li>
+                    <li><a href="/milky-way/index/Development.html">未来发展</a></li>
+                    <li><a href="/milky-way/index/Product&Technology.html">商品&技术</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 横幅 -->
+    <section class="banner">
+        <div class="container">
+            <h2>经营销售</h2>
+            <p>福建闽威科技以卓越的品质控制、广泛的客户基础和全球市场覆盖，为客户提供优质的产品和服务</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section id="clients" class="content-section fade-in">
+            <h2><i class="fas fa-users"></i> 服务客户名录</h2>
+            <p>我们与全球众多知名品牌建立了长期稳定的合作关系，涵盖电子制造、家电、科技等多个领域。</p>
+            
+            
+            <div class="client-list">
+                <p>小米、华为、美的、TCL、奥克斯、创维、戴森、冠捷科技、昕诺飞、得邦照明等多家客户</p>
+            </div>
+            
+            <p>我们的客户遍布消费电子、家电、照明等多个行业，体现了我们产品广泛的适用性和卓越的品质。</p>
+        </section>
+        
+        <section id="capacity" class="content-section fade-in stagger-delay-1">
+            <h2><i class="fas fa-chart-line"></i> 产出及规划</h2>
+            <p>我们持续扩大产能，以满足不断增长的市场需求，以下是我们的产能规划：</p>
+                       
+            <div class="capacity-chart">
+                <div class="chart-bar">
+                    <div class="year">2021年</div>
+                    <div class="bar-container">
+                        <div class="single-bar" style="width: 50%">单面板: 120万㎡</div>
+                        <div class="multi-bar" style="width: 30%">双面多层: 72万㎡</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="year">2022年</div>
+                    <div class="bar-container">
+                        <div class="single-bar" style="width: 46%">单面板: 110万㎡</div>
+                        <div class="multi-bar" style="width: 35%">双面多层: 84万㎡</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="year">2023年</div>
+                    <div class="bar-container">
+                        <div class="single-bar" style="width: 54%">单面板: 130万㎡</div>
+                        <div class="multi-bar" style="width: 38%">双面多层: 90万㎡</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="year">2024年</div>
+                    <div class="bar-container">
+                        <div class="single-bar" style="width: 75%">单面板: 180万㎡</div>
+                        <div class="multi-bar" style="width: 50%">双面多层: 120万㎡</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="year">2025年</div>
+                    <div class="bar-container">
+                        <div class="single-bar" style="width: 75%">单面板: 180万㎡</div>
+                        <div class="multi-bar" style="width: 63%">双面多层: 150万㎡</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="year">2026年</div>
+                    <div class="bar-container">
+                        <div class="single-bar" style="width: 75%">单面板: 180万㎡</div>
+                        <div class="multi-bar" style="width: 75%">双面多层: 180万㎡</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="year">2027年</div>
+                    <div class="bar-container">
+                        <div class="single-bar" style="width: 75%">单面板: 180万㎡</div>
+                        <div class="multi-bar" style="width: 88%">双面多层: 210万㎡</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>产能规划详情</h3>
+            <ul>
+                <li><strong>单面板产能</strong>: 2023年已完成增产至130万平方米，2024年完成180万平方米的年产能增长计划。</li>
+                <li><strong>双面、多层高精密电路板</strong>: 连续3年复合增长率>25%!</li>
+                <li>2023年已完成M3厂厂房建设和设备调试；2024年完成120万平方米的年产能投入生产；2025年实现增加量产HDI等高精密产能20万平方米。</li>
+            </ul>
+        </section>
+        
+        <section id="market" class="content-section fade-in stagger-delay-2">
+            <h2><i class="fas fa-globe-americas"></i> 市场辐射范围</h2>
+            <p>我们的产品远销全球，建立了广泛的国际销售网络，服务范围覆盖五大洲。</p>
+            
+            <div class="map-container">
+                <div class="world-map">
+                    <img src="/milky-way/Img/图片21.png" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+            </div>
+            
+            <div class="location-list">
+                <div class="location-item">
+                    <h3>北美洲</h3>
+                    <p>加拿大、美国、墨西哥</p>
+                </div>
+                <div class="location-item">
+                    <h3>南美洲</h3>
+                    <p>巴西</p>
+                </div>
+                <div class="location-item">
+                    <h3>欧洲</h3>
+                    <p>法国、德国、波兰</p>
+                </div>
+                <div class="location-item">
+                    <h3>非洲</h3>
+                    <p>尼日利亚</p>
+                </div>
+                <div class="location-item">
+                    <h3>亚洲</h3>
+                    <p>印度、韩国、日本、泰国、越南、印尼</p>
+                </div>
+            </div>
+            
+            <h3>国内重点市场</h3>
+            <p>北京、上海、广州、深圳、武汉、台湾等主要城市和地区。</p>
+        </section>
+        
+        <section id="quality" class="content-section fade-in stagger-delay-3">
+            <h2><i class="fas fa-award"></i> 品质控制体系</h2>
+            <p>我们建立了全面的品质控制体系，确保从原材料到成品的每一个环节都符合最高标准。</p>
+            
+            <h3>品质控制流程</h3>
+         
+            <div class="quality-flow">
+                <div class="flow-step">
+                    <h4>原材料</h4>
+                    <p>供应商审核</p>
+                    <p>试样检测</p>
+                </div>
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="flow-step">
+                    <h4>生产过程</h4>
+                    <p>前工序控制</p>
+                    <p>定期取样</p>
+                    <p>QA/AOI检测</p>
+                    <p>飞针测试</p>
+                </div>
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="flow-step">
+                    <h4>成品</h4>
+                    <p>全面检测</p>
+                    <p>质量评估</p>
+                </div>
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="flow-step">
+                    <h4>客户反馈</h4>
+                    <p>满意度调查</p>
+                    <p>问题收集</p>
+                </div>
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="flow-step">
+                    <h4>改进</h4>
+                    <p>品质改进计划</p>
+                    <p>内部流程优化</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin: 20px 0; font-weight: 600; color: #c00;">
+                <i class="fas fa-arrow-circle-right"></i> 数据追溯 → 根因分析 → 持续改进
+            </p>
+            
+            <h3>品质部职能分支</h3>         
+            <div class="quality-grid">
+                <div class="quality-item">
+                    <h4>DDC</h4>
+                    <p>品质系统维护与内外部体系稽核，内外部文件管控</p>
+                </div>
+                <div class="quality-item">
+                    <h4>IQC</h4>
+                    <p>原材料和外包材的进料品质检验</p>
+                </div>
+                <div class="quality-item">
+                    <h4>SQE</h4>
+                    <p>供应商的品质管理</p>
+                </div>
+                <div class="quality-item">
+                    <h4>OQC</h4>
+                    <p>出货产品品质检验，尺寸量测，出货报告，可靠性试验</p>
+                </div>
+                <div class="quality-item">
+                    <h4>IPQC</h4>
+                    <p>制程的品质管控</p>
+                </div>
+                <div class="quality-item">
+                    <h4>DQE</h4>
+                    <p>负责检查工程MI与CAM资料</p>
+                </div>
+                <div class="quality-item">
+                    <h4>QAE</h4>
+                    <p>信赖度测试与分析，仪校，量测系统分析，品质判定</p>
+                </div>
+                <div class="quality-item">
+                    <h4>CS</h4>
+                    <p>客户服务，客户要求的拟制审查</p>
+                </div>
+                <div class="quality-item">
+                    <h4>MRB</h4>
+                    <p>报废判定与分析</p>
+                </div>
+            </div>
+            
+            <h3>品质方针</h3>
+            <p style="font-size: 1.3rem; font-weight: 600; color: #c00; text-align: center; padding: 15px; background: #f8d7da; border-radius: 8px;">
+                品质为先、诚信为本、持续改善、顾客满意
+            </p>
+            
+            <div class="quality-grid">
+                <div class="quality-item">
+                    <h4>先期品质计划</h4>
+                    <ul>
+                        <li>新产品可行性评估</li>
+                        <li>制造流程规划</li>
+                        <li>制程风险评估(PFMEA)</li>
+                        <li>新产品pilot Run</li>
+                        <li>试生产控制计划</li>
+                        <li>过程及产品特殊特性确定</li>
+                    </ul>
+                </div>
+                <div class="quality-item">
+                    <h4>制造端预防</h4>
+                    <ul>
+                        <li>量产控制计划</li>
+                        <li>首末件检验，自主检查</li>
+                        <li>测量系统分析</li>
+                        <li>生产设备预防保养及维护</li>
+                        <li>产品性能及可靠性试验</li>
+                    </ul>
+                </div>
+                <div class="quality-item">
+                    <h4>客户端反应与恢复</h4>
+                    <ul>
+                        <li>设立24小时客户品质服务专线</li>
+                        <li>24小时内完成客诉处理及成效追踪</li>
+                        <li>定期交货品质追溯服务目标达成报告(DPPM)</li>
+                        <li>客户满意度调查评审</li>
+                        <li>不定时客户端技术服务</li>
+                    </ul>
+                </div>
+                <div class="quality-item">
+                    <h4>持续改善</h4>
+                    <ul>
+                        <li>召开周会对制程异常进行分析检讨</li>
+                        <li>应用SPC技术对作业中的关键参数和产品特殊性进行监控</li>
+                        <li>应用PDCA方式进行持续预防改善</li>
+                        <li>应用8D法进行异常改善</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>福建省福州市闽威科技股份有限公司</p>
+                    <p>MW-CP-2025-08-R3</p>
+                    <p>www.milky-way.com.cn</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <div class="footer-links-container">
+                        <div class="footer-links-col left-col">
+                            <a href="/milky-way/index.html">首页</a>
+                            <a href="/milky-way/index/Certification.html">资质认证</a>
+                            <a href="/milky-way/index/Facilities.html">设施设备</a>
+                            <a href="/milky-way/index/Honor.html">荣誉成就</a>
+                        </div>
+                        <div class="footer-links-col right-col">
+                            <a href="/milky-way/index/Business.html">经营销售</a>
+                            <a href="/milky-way/index/Development.html">未来发展</a>
+                            <a href="/milky-way/index/Product&Technology.html">商品&技术</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>福建闽威科技股份有限公司成立于1985年，是一家专注于高多层、HDI、COB LED、双层和单层电路板制造的国家高新技术企业。</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 福建闽威科技股份有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的滚动动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为产能图表添加动画效果
+            const bars = document.querySelectorAll('.single-bar, .multi-bar');
+            bars.forEach(bar => {
+                const originalWidth = bar.style.width;
+                bar.style.width = '0%';
+                
+                setTimeout(() => {
+                    bar.style.width = originalWidth;
+                }, 300);
+            });
+            // 移动端菜单切换
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('show');
+        });
+            
+            // 滚动动画
+            // const animatedElements = document.querySelectorAll('.scroll-animate');
+            
+            // const observer = new IntersectionObserver((entries) => {
+            //     entries.forEach(entry => {
+            //         if (entry.isIntersecting) {
+            //             entry.target.classList.add('visible');
+            //         }
+            //     });
+            // }, { threshold: 0.1 });
+            
+            // animatedElements.forEach(el => observer.observe(el));
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+                } else {
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
